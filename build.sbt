@@ -2,14 +2,14 @@ import Dependencies._
 
 ThisBuild / scalaVersion     := "2.13.3"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
-ThisBuild / organization     := "com.example"
-ThisBuild / organizationName := "example"
+ThisBuild / organization     := "fr.esgi"
+ThisBuild / organizationName := "grp6"
 // Scalafmt
 ThisBuild / scalafmtOnCompile := true
 
 fork in run := true
 connectInput in run := true
-mainClass in Compile := Some("fr.esgi.al.funprog.Main")
+mainClass in Compile := Some("funprog.Main")
 
 lazy val root = (project in file("."))
   .settings(
