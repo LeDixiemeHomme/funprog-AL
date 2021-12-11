@@ -4,10 +4,8 @@ import fr.esgi.grp6.model._
 
 object Main extends App {
   val lawnmower = Lawnmower(
-    position = Position(
-      orientation = Orientations.North,
-      coordinate = Coordinate(x = 1, y = 2)
-    )
+    position = Coordinate(1, 1),
+    direction = Orientation.N
   )
   val lawnmowers: List[Lawnmower] = List(lawnmower)
   val lawn: Lawn = Lawn(xMax = 5, yMax = 5, listOfLawnmower = lawnmowers)
