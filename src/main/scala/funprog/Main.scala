@@ -10,4 +10,5 @@ object Main extends App {
   val lawnmowers: List[Lawnmower] = List(lawnmower)
   val lawn: Lawn = Lawn(xMax = 5, yMax = 5, listOfLawnmower = lawnmowers)
   println(lawn.quartering)
+  lawnmower.move()
 }
