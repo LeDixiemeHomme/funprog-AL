@@ -1,7 +1,29 @@
 package fr.esgi.grp6.writer
 
-import fr.esgi.grp6.model.Lawnmower
+import fr.esgi.grp6.model.Orientation.Orientation
+import play.api.libs.json._
 
-class JSONWriter extends IWriter {
-  override def write(pathFile: String, mowerList: List[Lawnmower]): Unit = ???
+object JSONWriter {
+
+  case class Lawnmower(position: Coordinate, direction: Orientation)
+
+  object Lawnmower {
+    implicit val jsonWritesLawnmower: Writes[Lawnmower] = (lawnmower: Lawnmower) => {
+      Json.obj(
+        "position" -> lawnmower.position,
+        "bar" -> lawnmower.direction
+      )
+    }
+  }
+
+  case class Coordinate(x: Int, y: Int)
+
+  object Coordinate {
+    implicit val jsonWritesCoordinate: Writes[Coordinate] = (coordinate: Coordinate) => {
+      Json.obj(
+        "x" -> coordinate.x,
+        "y" -> coordinate.y
+      )
+    }
+  }
 }
