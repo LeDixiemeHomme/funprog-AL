@@ -11,7 +11,7 @@ object JSONWriter {
     implicit val jsonWritesLawnmower: Writes[Lawnmower] = (lawnmower: Lawnmower) => {
       Json.obj(
         "position" -> lawnmower.position,
-        "bar" -> lawnmower.direction
+        "direction" -> lawnmower.direction
       )
     }
   }
