@@ -27,7 +27,7 @@ object YAMLWriter {
     implicit val writesInt: Writes[Int] = (value: Int) => YamlString(value.toString)
     implicit val writesChar: Writes[Char] = (value: Char) => YamlString(value.toString)
     implicit val writesString: Writes[String] = (value: String) => YamlString(value)
-    implicit val writesArray: Writes[Array[Char]] = (value: Array[Char]) => ???
+    //implicit val writesArray: Writes[Array[Char]] = (value: Array[Char]) => ???
   }
 
   case class Limit(x: Int, y: Int)

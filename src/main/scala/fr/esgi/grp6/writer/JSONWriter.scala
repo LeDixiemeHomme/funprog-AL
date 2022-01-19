@@ -5,13 +5,14 @@ import play.api.libs.json._
 
 object JSONWriter {
 
-  case class Lawnmower(position: Coordinate, direction: Orientation)
+  case class Lawnmower(position: Coordinate, direction: Orientation, instruction: String)
 
   object Lawnmower {
     implicit val jsonWritesLawnmower: Writes[Lawnmower] = (lawnmower: Lawnmower) => {
       Json.obj(
         "position" -> lawnmower.position,
-        "direction" -> lawnmower.direction
+        "direction" -> lawnmower.direction,
+        "instructions" -> lawnmower.instruction
       )
     }
   }
