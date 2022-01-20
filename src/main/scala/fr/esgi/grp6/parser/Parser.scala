@@ -11,7 +11,7 @@ object Parser {
 
   val source: BufferedSource = fromFile("src/main/resources/input.txt")
   val lines: List[String] = source.getLines().map(line => line.replace(" ", "")).toList
-  val grid: Position = Position(lines.head.charAt(0) - 48, lines.head.charAt(1) - 48)
+//  val grid: Position = Position(lines.head.charAt(0) - 48, lines.head.charAt(1) - 48)
 
   def execute(): Unit = {
 
@@ -25,7 +25,7 @@ object Parser {
     for(mower <- mowers) {
       println(mower)
     }
-    print(grid)
+//    print(grid)
     source.close()
   }
 
@@ -53,9 +53,9 @@ object Parser {
   private def createMower(start: Int, lines: List[String], mowers: Array[Lawnmower]): Unit = {
     if (start % 2 != 0) {
       val position = Position(lines(start).charAt(0) - 48, lines(start).charAt(1) - 48)
-      if(position.x > grid.x || position.y > grid.y || position.x < 0 || position.y < 0) {
-        throw InvalidDataException("invalid position in input file", null)
-      }
+//      if(position.x > grid.x || position.y > grid.y || position.x < 0 || position.y < 0) {
+////        throw InvalidDataException("invalid position in input file")
+//      }
       val direction = charToDirection(lines(start).charAt(2))
       val mowerIndex = (start + 1) / 2 - 1
       val lawnmower = Lawnmower(position, direction)
