@@ -1,7 +1,8 @@
 package funprog
 
 import better.files.File
-import fr.esgi.grp6.refacto.{Coordinate, ParserRefacto, Result}
+import fr.esgi.grp6.parser.Parser
+import fr.esgi.grp6.model.{Coordinate, Result}
 import play.api.libs.json.Json
 
 import java.text.SimpleDateFormat
@@ -9,7 +10,7 @@ import java.util.Calendar
 
 object Main extends App {
 
-  val mowers = ParserRefacto.execute()
+  val mowers = Parser.execute()
 
   val result: Result = Result(
     limite = Coordinate(5, 5),

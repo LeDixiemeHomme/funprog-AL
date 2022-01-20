@@ -1,4 +1,4 @@
-package fr.esgi.grp6.refacto
+package fr.esgi.grp6.model
 
 import play.api.libs.json.{Json, Writes}
 
