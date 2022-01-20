@@ -1,6 +1,6 @@
 package refacto
 
-import fr.esgi.grp6.refacto.Orientation
+import fr.esgi.grp6.model.Orientation
 import org.scalatest.funsuite.AnyFunSuite
 
 class OrientationTest extends AnyFunSuite {

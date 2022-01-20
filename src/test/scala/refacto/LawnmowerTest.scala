@@ -1,6 +1,6 @@
 package refacto
 
-import fr.esgi.grp6.refacto.{Coordinate, Lawnmower, Orientation, Position}
+import fr.esgi.grp6.model.{Coordinate, Lawnmower, Orientation, Position}
 import org.scalatest.funsuite.AnyFunSuite
 
 class LawnmowerTest extends AnyFunSuite {

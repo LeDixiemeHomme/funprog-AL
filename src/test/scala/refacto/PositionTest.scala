@@ -1,6 +1,6 @@
 package refacto
 
-import fr.esgi.grp6.refacto.{Coordinate, Orientation, Position}
+import fr.esgi.grp6.model.{Coordinate, Orientation, Position}
 import org.scalatest.funsuite.AnyFunSuite
 
 class PositionTest extends AnyFunSuite {
