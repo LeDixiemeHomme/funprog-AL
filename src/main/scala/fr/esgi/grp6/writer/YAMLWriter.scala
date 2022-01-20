@@ -16,7 +16,9 @@ object YAMLWriter {
 
   case class YamlString(value: String) extends YamlValue
 
-  case class YamlArray(value: IndexedSeq[YamlValue] = Array[YamlValue]()) extends YamlValue
+  case class YamlArray(value: IndexedSeq[YamlValue]
+//                       = Array[YamlValue]()
+                      ) extends YamlValue
 
   trait Writes[A] {
     def writes(value: A): YamlValue
